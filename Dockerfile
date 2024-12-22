@@ -9,4 +9,4 @@ COPY src src
 RUN mvn clean test
 
 RUN mvn site:site
-RUN mvn allure:serve
+RUN mvn allure:aggregate
