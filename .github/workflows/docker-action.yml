@@ -8,3 +8,4 @@ jobs:
       - name: Run tests
         run: |
           docker build -t test:1 .
+          docker run -v target:target test:1
