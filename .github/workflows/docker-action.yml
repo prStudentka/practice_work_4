@@ -8,4 +8,4 @@ jobs:
       - name: Run tests
         run: |
           docker build -t test:1 .
-          docker run -it --mount type=bind,source=./target,destination=/target test:1
+          docker run --mount type=bind,source=./target,destination=/target test:1
