@@ -15,6 +15,7 @@ public class Specification {
     public static RequestSpecification requestSpecification() {
         return new RequestSpecBuilder()
                 .setBaseUri(BASE_URL)
+                .setRelaxedHTTPSValidation()
                 .setContentType(ContentType.JSON)
                 .setAccept(ContentType.JSON)
                 .build();
@@ -33,4 +34,5 @@ public class Specification {
                 .expectContentType(ContentType.JSON)
                 .build();
     }
+
 }
