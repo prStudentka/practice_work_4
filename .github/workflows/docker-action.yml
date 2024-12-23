@@ -10,3 +10,11 @@ jobs:
           mkdir -p ./report
           docker build -t app .
           docker run --mount type=bind,source=./report,destination=/target/site/allure-maven-plugin app
+      - name: Publish test report
+        uses: peaceiris/actions-gh-pages@v3.
+        if: always().
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: report
+          publish_dir: ./report
+          
