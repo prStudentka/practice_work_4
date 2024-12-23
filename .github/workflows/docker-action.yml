@@ -7,5 +7,6 @@ jobs:
       - uses: actions/checkout@v4
       - name: Run tests
         run: |
-          docker build -t test:1 .
-          docker run --mount type=bind,source=./target,destination=/target test:1
+          mkdir -p ./report
+          docker build -t app .
+          docker run --mount type=bind,source=./report,destination=/target/site/allure-maven-plugin app
