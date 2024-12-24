@@ -1,12 +1,7 @@
 package tests;
 
-//import static core.Specification.responseSpecification;
-//import static io.restassured.RestAssured.given;
-//import static io.restassured.RestAssured.responseSpecification;
-//import static org.hamcrest.Matchers.equalTo;
 
 import core.Specification;
-import core.Utils;
 import endpoints.*;
 import fixtures.Register;
 import fixtures.UserDetail;
@@ -15,20 +10,16 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Step;
 import io.qameta.allure.Story;
-//import io.restassured.internal.common.assertion.Assertion;
+
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 import io.restassured.http.ContentType;
 
-//import static org.hamcrest.Matchers.greaterThan;
-//import static org.junit.jupiter.api.Assertions.fail;
 import fixtures.UserDetail;
 import io.restassured.specification.ResponseSpecification;
 import org.apache.http.HttpStatus;
-//import org.apache.http.util.Asserts;
-//import org.checkerframework.checker.index.qual.Positive;
-//import org.junit.jupiter.api.Assumptions;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import core.Config;
